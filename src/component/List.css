@@ -1,0 +1,38 @@
+.follower{
+  height: 24px;
+  font-size: 16px;
+  font-weight: 450;
+}
+
+.sub{
+  height: 24px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.persent{
+  height: 24px;
+  font-size: 18px;
+  text-align: right;
+  color: blue;
+  font-weight: 800;
+}
+
+.title{
+  height: 24px;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+img{
+  width: 264px;
+  height: 210px;
+  border-radius: 12px;
+  border: solid 1px rgba(0,0,0,0.1)
+}
+
+section{
+  width: 264px;
+  height: 264px;
+  display: inline-block
+}
