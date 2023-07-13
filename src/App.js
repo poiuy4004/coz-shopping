@@ -16,26 +16,17 @@ export default function App() {
   }
 
   const [list, setList] = useState([])
-  const get=()=>{
-    return new Promise((res,rej)=>{
-      fetch('http://cozshopping.codestates-seb.link/api/v1/products?count=10')
-      .then(res=>res.json())
-      .then(list=>{
-        return res(list)
-      })
-      .catch(err=>console.log(err))
-    })
-  }
-  const getList=async()=>{
-    return setList(await get())
-  }
-  useEffect(()=>{getList()},[])
-
+  useEffect(()=>{
+    fetch('http://cozshopping.codestates-seb.link/api/v1/products')
+    .then(res=>res.json())
+    .then(list=>setList(list))
+    .catch(err=>console.log(err))
+  },[])
   return (
     <BrowserRouter>
       <Header />
       <Routes>
-      <Route path="*" element={<Main filter={filter} list={list} />} />
+      <Route path="*" element={<Main list={list} />} />
       <Route path="/products/list" element={<ProdectsList filter={filter} setFilter={setFilter} setFilterHandler={setFilterHandler} list={list} />} />
       <Route path="/bookmark" element={<Bookmark filter={filter} setFilter={setFilter} setFilterHandler={setFilterHandler} list={list} />} />
       </Routes>

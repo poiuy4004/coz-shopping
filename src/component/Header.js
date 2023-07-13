@@ -11,7 +11,7 @@ export default function Header() {
     <header>
       <button className="LogoAndText">
         <Link to="*">
-          <img src="public/logo.png" alt="로고(메인으로 이동)" />
+          <img src="/../logo.png" id="logo" alt="로고(메인으로 이동)" />
           COZ Shopping
         </Link>
       </button>

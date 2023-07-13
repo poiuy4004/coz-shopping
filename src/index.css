@@ -2,6 +2,8 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  text-decoration: none;
+  color: black;
 }
 
 body {
@@ -18,26 +20,25 @@ code {
     monospace;
 }
 
-footer{
-  border-top: solid 1px rgba(0,0,0,0.1);
-  height: 58px;
-  text-align: center;
-  color: rgba(136,136,136,1);
-  font-size: 12px;
-}
-
 .filterImg{
+  margin-bottom: 4px;
   border-radius: 50%;
+  width: 82px; height: 82px;
+  border: solid 1px rgba(0,0,0,0.1);
 }
 
 .filterBtn{
+  margin: 12px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border: none;
   background-color: transparent;
 }
 
 .filterBox{
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .giftbox{
@@ -66,6 +67,53 @@ li{
   animation: fadein 2s;
 }
 
+.menuBtn{
+  border: none;
+  background-color: transparent;
+  font-size: 32px;
+}
+
+.LogoAndText{
+  border: none;
+  background-color: transparent;
+  font-size: 32px;
+}
+
+footer{
+  display: flex;
+  position: absolute;
+  border-top: solid 1px rgba(0,0,0,0.1);
+  height: 58px; width: 100%; bottom: 0;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  color: rgba(136,136,136,1);
+  font-size: 12px;
+}
+
+.itemContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+dt{
+  margin: 12px 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+dd{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#main{
+  display: flex;
+  justify-content: space-around;
+}
+
 ul:after{
   content:"";
   position: fixed;
@@ -87,21 +135,20 @@ ul{
   box-shadow: 0px 0px 8px rgba(0,0,0,0.1);
 }
 
-.menuBtn{
-  border: none;
-  background-color: transparent;
-  font-size: 32px;
+button{
+  cursor: pointer;
 }
 
-.LogoAndText{
+#logo{
   border: none;
-  background-color: transparent;
-  font-size: 32px;
+  width: 55px;
+  height: 30px;
 }
 
 header {
   top: 0;
   position: sticky;
+  margin-bottom: 12px;
   padding: 25px 75px;
   background-color: rgba(255,255,255,1);
   height: 80px;

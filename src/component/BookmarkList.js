@@ -1,7 +1,7 @@
 import './List.css'
 export default function BookmarkList({item}){
   return(
-    <section>
+    <section id='itemBox'>
       <img src={item.image_url} alt={item.title} />
       <div>
         <span className='title'>{item.title}</span>
