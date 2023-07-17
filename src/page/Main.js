@@ -1,23 +1,23 @@
-import List from '../component/List'
 import BookmarkList from '../component/BookmarkList'
+import List from '../component/List'
 
-export default function Main({filter, list}){
-  const items = list.filter(item=>item.type===filter).slice(0,4)
-
+export default function Main({ list, marked, setMarked, modalImg, setModalImg, oneItems }){
   return(
-    <article>
+    <article id='main'>
       <section>
       <dl>
         <dt>상품 리스트</dt>
         <dd>
-          {items.map((item)=>{
-            return <List item={item} />
+          {oneItems.slice(0,4).map((item)=>{
+            return <List item={item} marked={marked} setMarked={setMarked} modalImg={modalImg} setModalImg={setModalImg} />
           })}
         </dd>
         <dt>북마크 리스트</dt>
         <dd>
-          {items.map((item)=>{
-            <BookmarkList item={item} />
+          {list.map((item)=>{
+            if(sessionStorage.getItem(item.id)==='true'){
+              return <BookmarkList item={item} marked={marked} setMarked={setMarked} modalImg={modalImg} setModalImg={setModalImg} /> 
+            }
           })}
         </dd>
       </dl>
