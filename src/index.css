@@ -66,13 +66,18 @@ li{
   color: white;
 }
 
+.modalTxt{
+  position: relative;
+  top: 0; left: 0;
+}
+
 .modalImg{
   z-index: 999;
   width: 744px; height: 480px;
 }
 
 .modalBox{
-  position: absolute;
+
   top: 176px; left: 268px;
   width: 744px; height: 480px;
   border: 1px solid rgba(0,0,0,0.5);
