@@ -7,12 +7,12 @@ export default function Bookmark({filter, setFilter, setFilterHandler, list, mar
       <Filter filter={filter} setFilter={setFilter} setFilterHandler={setFilterHandler} marked={marked} setMarked={setMarked} oneItems={oneItems} />
       <div className='itemContainer'>
       {filter==='All'?
-        list.map((item)=>{
+        list?.map((item)=>{
           if(sessionStorage.getItem(item.id)==='true'){
             return <BookmarkList item={item} marked={marked} setMarked={setMarked} modalImg={modalImg} setModalImg={setModalImg} /> 
           }
         })
-        : list.filter(item=>item.type===filter).map((item)=>{
+        : list?.filter(item=>item.type===filter).map((item)=>{
           if(sessionStorage.getItem(item.id)==='true'){
             return <BookmarkList item={item} marked={marked} setMarked={setMarked} modalImg={modalImg} setModalImg={setModalImg} /> 
           }
